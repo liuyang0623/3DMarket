@@ -1,0 +1,50 @@
+.user-modal {
+  .ant-modal-content {
+    padding: 0;
+    border-radius: 17px;
+    .user-model_content {
+      min-height: 700px;
+      padding: 10px 20px;
+      .modal-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #222;
+        text-align: center;
+        height: 42px;
+        line-height: 42px;
+      }
+      .list_wrap {
+        .user-item {
+          height: 50px;
+          @include flex(
+            (
+              i: center,
+              c: space-between,
+            )
+          );
+          .item-left {
+            @include flex(
+              (
+                i: center,
+                c: flex-start,
+              )
+            );
+            .user-header {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              border: 2px solid $themeColor;
+              box-sizing: border-box;
+              margin-right: 10px;
+            }
+            .user-name {
+              font-size: 13px;
+              font-weight: 600;
+              color: #222222;
+            }
+          }
+        }
+      }
+    }
+  }
+}

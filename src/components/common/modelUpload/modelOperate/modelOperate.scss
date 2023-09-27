@@ -1,0 +1,130 @@
+.model-operate_wrap {
+  .modal-title {
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    border-bottom: 1px solid $defaultColor;
+  }
+  .operate-body {
+    height: 700px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    .upload-logo {
+      width: 190px;
+      height: auto;
+      margin-bottom: 80px;
+    }
+    .upload-model {
+      .ant-upload-drag {
+        border: none;
+        background-color: #fff;
+      }
+    }
+    .upload_desc {
+      .add_wrap {
+        font-size: 24px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 45px;
+        .add_btn {
+          color: $themeColor;
+          text-decoration: underline solid;
+        }
+      }
+      .upload-tip {
+        font-size: 16px;
+        font-weight: 500;
+        color: #222;
+        white-space: pre-wrap;
+      }
+    }
+    .operate-main {
+      padding: 18px 28px;
+      @include flex(
+        (
+          i: flex-start,
+          c: space-between,
+        )
+      );
+      .body-left {
+        flex: 1;
+        .model-show_wrap {
+          width: 370px;
+          height: 218px;
+          position: relative;
+        }
+        .reupload_btn {
+          margin-top: 180px;
+          width: 370px;
+          height: 36px;
+          border: 1px solid $defaultColor;
+          color: $defaultColor;
+          font-size: 13px;
+          font-weight: 600;
+          border-radius: 12px;
+          margin-bottom: 23px;
+          @include flex(
+            (
+              i: center,
+              c: center,
+            )
+          );
+          i {
+            margin-right: 10px;
+          }
+        }
+        .model-illustrate {
+          width: 370px;
+          .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #222;
+            line-height: 19px;
+            margin-bottom: 7px;
+          }
+          .desc_wrap {
+            padding-left: 20px;
+            .li-item {
+              font-size: 13px;
+              font-weight: 500;
+              color: #888789;
+              line-height: 19px;
+              list-style: disc;
+            }
+          }
+        }
+      }
+      .body-middle {
+        flex: 1;
+        margin: 0 30px;
+        .middle-top {
+          margin-bottom: 23px;
+          @include flex(
+            (
+              c: space-between,
+            )
+          );
+          .top-left {
+            flex: 2;
+            margin-right: 20px;
+            @include flex(
+              (
+                c: space-between,
+                d: column,
+              )
+            );
+          }
+        }
+      }
+      .body-right {
+        flex: 1;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,120 @@
+.filter_wrap {
+  padding: 20px 80px;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 70px;
+  .filter-top {
+    @include flex(
+      (
+        i: flex-start,
+        c: space-between,
+      )
+    );
+    .model-filter_btn {
+      height: 34px;
+      @include flex(
+        (
+          i: center,
+          c: center,
+        )
+      );
+      border: 1px solid $defaultColor;
+      padding: 0 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+      border-radius: 12px;
+      i {
+        color: #888789;
+      }
+      .label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #888789;
+        margin-left: 5px;
+      }
+    }
+    .model-filter_btn:hover {
+      transition: all 0.3s;
+      border: 1px solid $hoverColor;
+      box-shadow: 0px 0px 8px 3px rgba(0, 240, 255, 0.25);
+    }
+    .filter-active {
+      background-color: $themeColor;
+      i {
+        color: #fff;
+      }
+      .label {
+        color: #fff;
+      }
+    }
+  }
+  .filter-bottom {
+    margin-top: 18px;
+    @include flex(
+      (
+        i: center,
+        c: flex-start,
+      )
+    );
+    .select_outer {
+      flex: 1;
+      margin-right: 20px;
+    }
+    .select_outer:last-child {
+      margin-right: 0;
+    }
+    .checkbox_wrap {
+      margin: 0 20px;
+      border-left: 1px solid $defaultColor;
+      border-right: 1px solid $defaultColor;
+      padding: 0 22px 0 30px;
+      @include flex(
+        (
+          i: center,
+          c: center,
+        )
+      );
+      .u-checkbox {
+        margin-right: 20px;
+        span {
+          font-size: 13px;
+          font-weight: 600;
+          color: #888789;
+        }
+        .ant-checkbox {
+          .ant-checkbox-inner {
+            border-color: $defaultColor;
+          }
+        }
+        .ant-checkbox-checked {
+          .ant-checkbox-inner {
+            background-color: $themeColor;
+          }
+          &::after {
+            border: 2px solid $themeColor;
+          }
+        }
+        &:hover {
+          .ant-checkbox {
+            .ant-checkbox-inner {
+              border-color: $themeColor;
+            }
+          }
+        }
+      }
+      .u-checkbox:last-child {
+        margin-right: 0;
+      }
+      .ant-checkbox-wrapper-checked.u-checkbox {
+        span {
+          color: $themeColor;
+        }
+      }
+    }
+    .slider_wrap {
+      width: 92px;
+    }
+  }
+}

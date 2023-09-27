@@ -1,0 +1,174 @@
+.login-page {
+  height: 100vh;
+  @include flex(
+    (
+      i: center,
+      c: center,
+    )
+  );
+  .page-part {
+    flex: 1;
+    height: 100%;
+  }
+  .left {
+    background-color: $themeColor;
+    @include flex(
+      (
+        i: center,
+        c: flex-start,
+        d: column,
+      )
+    );
+    .login-logo {
+      width: 138px;
+      height: auto;
+      margin-top: 50px;
+    }
+  }
+  .right {
+    @include flex(
+      (
+        i: center,
+        c: center,
+        d: column,
+      )
+    );
+    .title {
+      width: 350px;
+      font-size: 48px;
+      font-weight: 700;
+      color: $themeColor;
+      line-height: 58px;
+      margin-bottom: 25px;
+    }
+    .login-type {
+      width: 350px;
+      margin-bottom: 25px;
+      .change-type_wrap {
+        margin-bottom: 25px;
+        @include flex(
+          (
+            i: center,
+            c: flex-start,
+          )
+        );
+        .type_btn {
+          font-size: 16px;
+          color: $themeColor;
+        }
+        .active-type {
+          font-weight: 700;
+        }
+        .divide_line {
+          width: 1px;
+          height: 15px;
+          background-color: $themeColor;
+          margin: 0 15px;
+        }
+      }
+      .login-form {
+        .form-item:first-child {
+          margin-bottom: 15px;
+        }
+        .form-item {
+          .form-common_style {
+            width: 100%;
+            height: 50px;
+            border-radius: 12px;
+            box-sizing: border-box;
+            border: 1px solid $defaultColor;
+            input {
+              font-size: 16px;
+              font-weight: 500;
+              padding-left: 20px;
+            }
+          }
+          .phone-login_wrap {
+            @include flex(
+              (
+                i: center,
+                c: flex-start,
+              )
+            );
+            .prefix_wrap {
+              height: 100%;
+            }
+          }
+          .sms_wrap {
+            @include flex(
+              (
+                i: center,
+                c: space-between,
+              )
+            );
+            .get-sms_btn {
+              font-size: 16px;
+              font-weight: 500;
+              color: $themeColor;
+              margin-right: 20px;
+            }
+          }
+          .common-input {
+            font-size: 16px;
+            font-weight: 500;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+    .login-btn {
+      width: 100%;
+      height: 50px;
+      border-radius: 12px;
+      background-color: $themeColor;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 25px;
+    }
+    .other-login_wrap {
+      width: 350px;
+      .other-title {
+        font-size: 12px;
+        color: $defaultColor;
+        @include flex(
+          (
+            i: center,
+            c: center,
+          )
+        );
+        &::before,
+        &::after {
+          content: "";
+          width: 15px;
+          height: 1px;
+          background-color: $defaultColor;
+        }
+        &::before {
+          margin-right: 6px;
+        }
+        &::after {
+          margin-left: 6px;
+        }
+      }
+      .spaceu-login {
+        background-color: #222;
+        margin-bottom: 40px;
+      }
+      .quick-login_wrap {
+        padding: 0 25px;
+        @include flex(
+          (
+            i: center,
+            c: space-between,
+          )
+        );
+        .login-item {
+          i {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,127 +1,141 @@
-import request from "@/utils/http/request";
+import service from "../utils/request";
+
 enum Api {
-  GetSmsCode = "/note/ssoserver/getsms",
+  GetSmsCode = "/note/ssoserver/sliding/verification/sms",
+  GetEmailSmsCode = "/note/ssoserver/sliding/verification/email",
   LoginByPhone = "/note/ssoserver/phone/login/by/code",
+  LoginByEmail = "/note/ssoserver/email/login/by/code",
   GoogleLogin = "/note/ssoserver/googlelogin",
   FacebookLogin = "/note/ssoserver/facebook/login",
   AppleLogin = "/note/ssoserver/applelogin/customize",
-  WechatLogin = "/note/ssoserver/wechatlogin/customize",
-  BindWallet = "/note/wallet/user/bind",
-  UnBindWallet = "/note/wallet/user/unbind/by/wallet_address",
-  SubmitNftData = "/note/wallet/add/user/nft",
-  GetHomePage = "/note/game/user/get/home_page",
-  LoginByEmail = "/note/ssoserver/email/login/by/code",
-  GetEmailSmsCode = "/note/ssoserver/sliding/verification/email",
-  GetVerSmsCode = "/note/ssoserver/sliding/verification/sms",
+  WechatLogin = "/note/ssoserver/wechatlogin",
+  PullUserInfo = "/note/ssoserver/pullUserInfo",
+  ChangeFollow = "/note/ssoserver/library/optFollowRelation",
+  IfFollow = "/note/ssoserver/library/ifFollow",
+  GetFollowAndFansList = "/note/ssoserver/library/getFollowRelationList",
+  GetTotalRecord = "/note/library/to/c/get/total/record",
 }
-
-const clientInfo = JSON.stringify({
-  channel: "",
-  platform: "PC",
-  device_model: "",
-  app_version: "",
-  app_version_name: "",
-  os_version: "",
-});
-/**
- * 获取用户个人主页
- */
-export const getHomePage = () => {
-  return request.get(Api.GetHomePage);
-};
-/**
- * 获取验证码
- */
-export const getSmsCodeService = (params: { phone: string }) => {
-  return request.get(Api.GetSmsCode, { params });
-};
-/**
- * 获取邮箱验证码
- */
-export const getVerEmailSmsCode = (params: {
-  email: string;
-  verification_request: any;
-}) => {
-  return request.post(Api.GetEmailSmsCode, params, {
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
-};
-/**
- * 获取短信验证码（人机验证）
- */
-export const getVerSmsCode = (params: {
+interface GetPhoneSmsCodeInterface {
   phone: string;
   verification_request: any;
-}) => {
-  return request.post(Api.GetVerSmsCode, params, {
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
+}
+const getPhoneSmsCode = (params: GetPhoneSmsCodeInterface) => {
+  return service.post(Api.GetSmsCode, params);
+};
+interface GetEmailSmsCodeInterface {
+  email: string;
+  verification_request: any;
+}
+const getEmailSmsCode = (params: GetEmailSmsCodeInterface) => {
+  return service.post(Api.GetEmailSmsCode, params);
 };
 
-/**
- * 手机号验证码登录
- */
-export const loginByPhone = (params: { phone: string; code: string }) => {
-  return request.post(Api.LoginByPhone, params, {
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
-};
-/**
- * 邮箱验证码登录
- */
-export const loginByEmail = (params: { email: string; code: string }) => {
-  return request.post(Api.LoginByEmail, params, {
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
+interface LoginByPhoneInterface {
+  phone: string;
+  code: string;
+}
+const loginByPhone = (params: LoginByPhoneInterface) => {
+  return service.post(Api.LoginByPhone, params);
 };
 
-/**
- * 谷歌登录，直接提交前端获取到的明文用户信息
- */
-export const googleLogin = (params: any) => {
-  return request.post(Api.GoogleLogin, params, {
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
+interface LoginByEmailInterface {
+  email: string;
+  code: string;
+}
+const loginByEmail = (params: LoginByEmailInterface) => {
+  return service.post(Api.LoginByEmail, params);
 };
-/**
- * facebook登录，直接提交前端获取到的明文用户信息
- */
-export const facebookLogin = (params: any) => {
-  return request.post(Api.FacebookLogin, params, {
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
+
+interface GoogleLoginInterface {
+  google_user_id: string;
+  email: string;
+  name: string;
+  picture_url: string;
+  family_name: string;
+  given_name: string;
+}
+const googleLogin = (params: GoogleLoginInterface) => {
+  return service.post(Api.GoogleLogin, params);
 };
-/**
- * 苹果登录
- */
-export const appleLogin = (params: any) => {
-  return request.get(Api.AppleLogin, {
-    params,
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
+
+interface FbLoginInterface {
+  fb_user_id: string;
+  fb_email: string;
+  fb_name: string;
+  fb_header_url: string;
+}
+const facebookLogin = (params: FbLoginInterface) => {
+  return service.post(Api.FacebookLogin, params);
 };
-/**
- * 微信扫码登录
- */
-export const wechatLogin = (params) => {
-  return request.get(Api.WechatLogin, {
-    params,
-    headers: {
-      "client-info": clientInfo,
-    },
-  });
+
+interface AppleLoginInterface {
+  token: string;
+}
+const appleLogin = (params: AppleLoginInterface) => {
+  return service.get(Api.AppleLogin, params);
+};
+
+interface WechatLoginInterface {
+  type: string;
+  code: string;
+}
+const wechatLogin = (params: WechatLoginInterface) => {
+  return service.get(Api.WechatLogin, params);
+};
+
+interface PullUserInfoParamsI {
+  user_id?: string;
+}
+const pullUserInfo = (params: PullUserInfoParamsI) => {
+  return service.get(Api.PullUserInfo, params);
+};
+
+interface ChangeFollowParamsI {
+  opt: 1 | 2;
+  my_user_id?: string;
+  user_id: string;
+}
+const changeFollow = (params: ChangeFollowParamsI) => {
+  return service.get(Api.ChangeFollow, params);
+};
+
+interface IfFollowParamsI {
+  my_user_id?: string;
+  user_id: string;
+}
+const getIfFollow = (params: IfFollowParamsI) => {
+  return service.get(Api.IfFollow, params);
+};
+
+interface GetFollowAndFansListParamsI {
+  type: 1 | 2;
+  my_user_id?: string;
+  page_size: number;
+  page_number: number;
+}
+const getFollowAndFansList = (params: GetFollowAndFansListParamsI) => {
+  return service.get(Api.GetFollowAndFansList, params);
+};
+
+interface GetTotalRecordParamsI {
+  user_id?: string;
+}
+const getTotalRecord = (params: GetTotalRecordParamsI) => {
+  return service.get(Api.GetTotalRecord, params);
+};
+
+export {
+  getPhoneSmsCode,
+  getEmailSmsCode,
+  loginByPhone,
+  loginByEmail,
+  googleLogin,
+  facebookLogin,
+  appleLogin,
+  wechatLogin,
+  pullUserInfo,
+  changeFollow,
+  getIfFollow,
+  getFollowAndFansList,
+  getTotalRecord
 };

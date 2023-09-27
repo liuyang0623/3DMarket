@@ -1,0 +1,49 @@
+.site-footer_wrap {
+  height: 96px;
+  background-color: #222;
+  @include flex(
+    (
+      i: center,
+      c: center,
+    )
+  );
+  .logo {
+    width: 54px;
+    height: auto;
+    margin-right: 30px;
+  }
+  .copyright {
+    font-size: 12px;
+    color: #fff;
+    margin-right: 30px;
+  }
+  .record_wrap {
+    @include flex(
+      (
+        i: center,
+        c: center,
+      )
+    );
+    margin-right: 30px;
+    .record-icon {
+      width: 20px;
+      height: auto;
+      margin-right: 4px;
+    }
+    .record {
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+  .nav_wrap {
+    .footer-nav_btn {
+      color: #fff;
+      font-size: 14px;
+      border-right: 1px solid #fff;
+      padding: 0 15px;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

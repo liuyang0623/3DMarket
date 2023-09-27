@@ -1,0 +1,21 @@
+.model-shot_wrap {
+  position: fixed;
+  z-index: -1;
+  bottom: -300px;
+  .single-img {
+    width: 200px;
+    height: auto;
+  }
+  .img_wrap {
+    @include flex(
+      (
+        i: center,
+        c: flex-start,
+      )
+    );
+    .img-item {
+      width: 150px;
+      height: auto;
+    }
+  }
+}

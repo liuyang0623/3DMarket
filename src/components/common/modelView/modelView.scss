@@ -1,0 +1,126 @@
+.model-view_wrap {
+  width: 100%;
+  height: 100%;
+  .model-show {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: #00000033;
+    position: relative;
+    .model-view {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .loading_wrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #00000059;
+      border-radius: 12px;
+      @include flex(
+        (
+          i: center,
+          c: center,
+          d: column,
+        )
+      );
+      .loading-msg {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .model-progress-bar {
+        width: 80%;
+        height: 5px;
+        background-color: #ffffff80;
+        border-radius: 12px;
+        &-inner {
+          height: 100%;
+          background-color: $themeColor;
+          border-radius: 12px;
+        }
+      }
+    }
+    .ani-action_wrap {
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      z-index: 999;
+      .ani-btn {
+        margin-bottom: 6px;
+        i {
+          font-size: 36px;
+          color: #fff;
+        }
+      }
+      .action-picker {
+        @include flex(
+          (
+            i: center,
+            c: flex-start,
+            d: column,
+          )
+        );
+        .action-item {
+          width: 88px;
+          height: 28px;
+          border-radius: 20px;
+          border: 2px solid #fff;
+          background-color: #222;
+          color: #fff;
+          font-size: 13px;
+          font-weight: 700;
+          margin-bottom: 6px;
+          box-sizing: border-box;
+        }
+        .action-item:hover {
+          background-color: $themeColor;
+        }
+        .active-item, .active-item:hover {
+          border-color: $themeColor;
+          color: $themeColor;
+          background-color: #fff;
+        }
+        .action-item:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .model-meta_wrap {
+    margin-top: 16px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    border: 1px solid $defaultColor;
+    border-radius: 17px;
+    .data-item {
+      height: 34px;
+      @include flex((i: center, c: space-between));
+      .left {
+        .data-title {
+          font-size: 13px;
+          font-weight: 600;
+          color: #888789;
+        }
+      }
+      .right {
+        font-size: 13px;
+        font-weight: 500;
+        color: #888789;
+      }
+    }
+  }
+  .img_wrap {
+    @include flex((i: center, c: flex-start));
+    position: fixed;
+    top: -300px;
+    // .img-item {
+    //   width: 150px;
+    //   height: auto;
+    // }
+  }
+}

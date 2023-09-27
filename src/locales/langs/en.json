@@ -1,0 +1,339 @@
+{
+    "header": {
+        "nav": {
+            "source": "资源库",
+            "teach": "教程",
+            "download": "下载"
+        },
+        "search": "搜索关键词、类别和风格",
+        "login": "登录 / 注册"
+    },
+    "filter": {
+        "sort": {
+            "comprehensive": "综合排序",
+            "mostget": "最多获取",
+            "mostlike": "最多点赞",
+            "mostview": "最多浏览",
+            "latestupload": "最新上传",
+            "originupload": "最初上传",
+            "priceAsc": "价格升序",
+            "priceDesc": "价格降序"
+        },
+        "filter": {
+            "btn": "筛选工具",
+            "time": {
+                "all": "所有时间",
+                "month": "本月",
+                "week": "本周",
+                "today": "今天"
+            },
+            "modelType": {
+                "group": "合集",
+                "animation": "动画",
+                "free": "免费"
+            },
+            "price": {
+                "noLimit": "不限"
+            }
+        },
+        "userFilter": {
+            "all": "全部",
+            "single": "单个模型",
+            "collection": "模型合集"
+        }
+    },
+    "model": {
+        "loading": "模型加载中...",
+        "loadMore": "加载更多",
+        "maybeLike": "猜你喜欢",
+        "modelCard": {
+            "ani": "动画",
+            "free": "免费"
+        },
+        "detail": {
+            "time": "发布时间",
+            "size": "模型大小",
+            "desc": "描述",
+            "tag": "标签"
+        },
+        "comment": {
+            "placeholder": "评论内容...",
+            "title": "评论"
+        },
+        "operate": {
+            "upload": {
+                "title": "模型上传",
+                "edit": "模型编辑",
+                "shotTitle": "封面",
+                "uploadBtn": "上传",
+                "uploadCollection": "创建合集",
+                "editCollection": "编辑合集",
+                "selected": "已选",
+                "text": "拖拽模型到这里，或是",
+                "add": "点击这里添加",
+                "tip": "目前只支持 GLB 格式\n模型体积不可超过 2MB",
+                "loading": "模型上传中...",
+                "check": "模型验证中...",
+                "faceCount": "模型面数",
+                "material": "材质识别",
+                "animationCount": "动画识别",
+                "size": "模型大小",
+                "texture": "纹理",
+                "materials": "材质",
+                "unit": "种",
+                "reupload": "重新上传",
+                "modelIllustrate": {
+                    "title": "模型相关说明",
+                    "desc": [
+                        "目前只支持 GLB 格式，模型体积不可超过 2MB",
+                        "模型的标题、描述和标签可以被任何访问此页面的人阅读，不要包括敏感数据，如ID、凭证或非公开信息"
+                    ]
+                },
+                "form": {
+                    "name": "名称",
+                    "cover": "封面",
+                    "classify": "分类",
+                    "label": "标签",
+                    "desc": "描述",
+                    "animate": "动画",
+                    "permissions": "权限",
+                    "permissionsDescTitle": "权限说明",
+                    "permissionsDesc": {
+                        "public": {
+                            "title": "SpaceU Studio - 公开",
+                            "desc": [
+                                "默认的模型可见性是公开的",
+                                "该模型将被 SpaceU Studio 上的任何人公开可见",
+                                "该模型将出现在 SpaceU Studio 的搜索结果中",
+                                "该模型将被 SpaceU Studio 上的任何人可获取并用在 SpaceU 编辑器里"
+                            ]
+                        },
+                        "toll": {
+                            "title": "SpaceU Studio - 收费",
+                            "desc": [
+                                "该模型将被 SpaceU Studio 上的任何人公开可见",
+                                "该模型将出现在 SpaceU Studio 的搜索结果中",
+                                "该模型将被 SpaceU Studio 上的任何人可购买并用在 SpaceU 编辑器里",
+                                "收入将存在您的账户里，您可以在 “账户余额” 对此进行管理"
+                            ]
+                        },
+                        "private": {
+                            "title": "SpaceU Studio - 私密",
+                            "desc": [
+                                "该模型将在 SpaceU Studio 上未被列出",
+                                "该模型不会出现在 SpaceU Studio 的搜索结果中",
+                                "该模型只有您自己可用在 SpaceU 编辑器里"
+                            ]
+                        }
+                    },
+                    "collectionIllustrate": {
+                        "title": "模型合集相关说明",
+                        "desc": [
+                            "模型合集包括的模型数量没有限制",
+                            "模型合集发布之后不能二次添加新模型",
+                            "发布者的删除操作,不影响已获取的用户账户里的模型合集"
+                        ]
+                    },
+                    "collectionPermissionsDesc": {
+                        "public": {
+                            "title": "SpaceU Studio - 公开",
+                            "desc": [
+                                "默认的模型合集可见性是公开的",
+                                "该模型合集将被 SpaceU Studio 上的任何人公开可见",
+                                "该模型合集将出现在 SpaceU Studio 的搜索结果中",
+                                "该模型合集将被 SpaceU Studio 上的任何人可获取并用在 SpaceU 编辑器里"
+                            ]
+                        },
+                        "toll": {
+                            "title": "SpaceU Studio - 收费",
+                            "desc": [
+                                "该模型合集将被 SpaceU Studio 上的任何人公开可见",
+                                "该模型合集将出现在 SpaceU Studio 的搜索结果中",
+                                "该模型合集将被 SpaceU Studio 上的任何人可购买并用在 SpaceU 编辑器里",
+                                "收入将存在您的账户里，您可以在 “账户余额” 对此进行管理"
+                            ]
+                        },
+                        "private": {
+                            "title": "SpaceU Studio - 私密",
+                            "desc": [
+                                "该模型合集将在 SpaceU Studio 上未被列出",
+                                "该模型合集不会出现在 SpaceU Studio 的搜索结果中",
+                                "该模型合集只有您自己可用在 SpaceU 编辑器里"
+                            ]
+                        }
+                    },
+                    "permissionsLabels": {
+                        "public": "公开",
+                        "toll": "收费",
+                        "private": "私密"
+                    },
+                    "price": "价格",
+                    "placeholders": {
+                        "name": "输入名称...",
+                        "label": "输入文字，按空格或回车以生成标签",
+                        "desc": "输入描述...",
+                        "price": "输入价格...",
+                        "classify1": "无",
+                        "classify2": "无"
+                    },
+                    "animateList": "动画列表",
+                    "animateName": "动画名称",
+                    "buttons": {
+                        "cancel": "取消",
+                        "draft": "保存草稿",
+                        "upload": "上传",
+                        "next": "下一步",
+                        "pre": "上一步",
+                        "create": "创建",
+                        "delModel": "删除模型",
+                        "delCollection": "删除合集",
+                        "submit": "提交",
+                        "shot": "拍照"
+                    }
+                }
+            },
+            "edit": {
+                "title": "编辑",
+                "okBtn": "提交"
+            }
+        }
+    },
+    "user": {
+        "focus": "关注Ta",
+        "focused": "已关注",
+        "together": "已互关",
+        "action": {
+            "manager": "账号管理",
+            "logout": "退出登录"
+        },
+        "userCenter": {
+            "report": "举报TA",
+            "myFollow": "我的关注",
+            "myFans": "我的粉丝",
+            "focus": "关注",
+            "fans": "粉丝",
+            "balance": "余额",
+            "edit": "编辑个人信息",
+            "share": "分享",
+            "tags": {
+                "unit": "次",
+                "money": "总收入",
+                "trade": "交易",
+                "view": "查看",
+                "like": "喜欢",
+                "share": "分享"
+            },
+            "tab": {
+                "public": "发布",
+                "draft": "草稿",
+                "get": "获取",
+                "like": "喜欢",
+                "collect": "收藏",
+                "view": "浏览记录"
+            },
+            "otherTab": {
+                "public": "Ta的发布",
+                "like": "Ta喜欢"
+            }
+        }
+    },
+    "prompt": {
+        "empty": "空的",
+        "emptyText": "似乎我们无法根据你的搜索找到任何结果\n换个关键词试试吧~"
+    },
+    "login": {
+        "title": "欢迎",
+        "phone": "手机号",
+        "email": "邮箱地址",
+        "getSms": "获取验证码",
+        "sms": "输入验证码",
+        "btn": "登录 / 注册",
+        "other": "其他账号登录",
+        "spaceu": "SpaceU账号登录",
+        "phoneOrEmail": "手机或邮箱登录",
+        "common": "游客登录 >",
+        "admin": "管理员登录 >",
+        "type0": "手机",
+        "type1": "邮箱",
+        "captcha": "安全验证"
+    },
+    "message": {
+        "noSelect": "未选择模型"
+    },
+    "action": {
+        "draft": {
+            "title": "是否放弃草稿？",
+            "desc": "你将舍弃所做的编辑\n此操作不可撤销！",
+            "cancelText": "继续编辑",
+            "okText": "放弃"
+        }
+    },
+    "shoppingCart": {
+        "title": "购物车",
+        "check": "结账"
+    },
+    "messageBox": {
+        "title": "通知",
+        "readAll": "全部已读"
+    },
+    "userSettings": {
+        "saveBtn": "保存",
+        "nextBtn": "下一步",
+        "tabs": {
+            "material": "个人资料",
+            "setAccount": "设置账号",
+            "rePassword": "修改密码",
+            "notify": "通知设置",
+            "privacy": "隐私设置"
+        },
+        "material": {
+            "title": "个人资料",
+            "upload": "上传头像",
+            "nickname": "昵称",
+            "sex": "性别",
+            "job": "职业",
+            "desc": "个人描述",
+            "home": "个人主页",
+            "man": "男",
+            "woman": "女"
+        },
+        "setAccount": {
+            "title": "绑定账号",
+            "phone": "绑定手机号",
+            "email": "绑定邮箱",
+            "others": "绑定三方账号",
+            "othersDesc": "绑定第三方帐号，可以直接登录SpaceU Studio，还可以将SpaceU内容同步到以下平台， 与更多好友分享。如果当前帐号在对应站点处于登录状态，需退出登录后，才能重新绑定。",
+            "bindBtn": "绑定",
+            "logout": "注销账号",
+            "logoutDesc": "注销账号注销后账号所有数据将被销毁并不可找回，请谨慎操作。"
+        },
+        "rePassword": {
+            "title": "修改密码"
+        },
+        "notify": {
+            "title": "通知设置"
+        },
+        "privacy": {
+            "title": "隐私设置"
+        },
+        "placeholder": {
+            "name": "输入姓名...",
+            "none": "无",
+            "link": "输入个人主页...",
+            "desc": "输入描述...",
+            "phone": "输入新手机号",
+            "email": "输入邮箱",
+            "password": "当前密码",
+            "newPassword": "新密码",
+            "confirmPassword": "确定新密码"
+        }
+    },
+    "footer": {
+        "navs": {
+            "privacy": "隐私政策",
+            "protocol": "用户协议",
+            "community": "社区中心",
+            "contact": "联系我们"
+        }
+    }
+}

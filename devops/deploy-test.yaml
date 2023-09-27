@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: fe-3d-space
-  name: fe-3d-space
+    app: fe-spaceu-market
+  name: fe-spaceu-market
   namespace: test
 
 spec:
@@ -11,7 +11,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: fe-3d-space
+      app: fe-spaceu-market
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -20,21 +20,21 @@ spec:
   template:
     metadata:
       labels:
-        app: fe-3d-space
+        app: fe-spaceu-market
     spec:
       imagePullSecrets:
         - name: $SECRET_NAME
       containers:
         - image: $IMAGE_NAME
           imagePullPolicy: IfNotPresent
-          name: fe-3d-space
+          name: fe-spaceu-market
           resources:
             limits:
-              cpu: '256m'
-              memory: 256Mi
+              cpu: '1'
+              memory: 1024Mi
             requests:
-              cpu: 256m
-              memory: 256Mi
+              cpu: 400m
+              memory: 512Mi
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
       restartPolicy: Always

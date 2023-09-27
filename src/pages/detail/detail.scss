@@ -1,0 +1,292 @@
+.model-detail {
+  padding: 100px 60px 40px 60px;
+  height: 100vh;
+  box-sizing: border-box;
+  @include flex(
+    (
+      i: flex-start,
+      c: space-between,
+    )
+  );
+  .detail_left {
+    flex: 2;
+    margin-right: 32px;
+    max-height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    .model_wrap {
+      width: 100%;
+      height: 540px;
+      margin-bottom: 10px;
+    }
+    .collection-list {
+      width: 100%;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+      @include flex(
+        (
+          i: center,
+          c: flex-start,
+        )
+      );
+      .collection-item {
+        width: 195px;
+        height: 135px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.2);
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .active-item {
+        box-shadow: 0px 0px 4px 4px rgba(0, 240, 255, 0.15);
+        border: 1px solid $hoverColor;
+      }
+    }
+    .model-desc {
+      margin: 25px 0 16px 0;
+      .desc_top {
+        @include flex(
+          (
+            i: center,
+            c: space-between,
+          )
+        );
+        .model-name {
+          font-size: 24px;
+          font-weight: 600;
+          color: #222;
+        }
+        .top-right {
+          @include flex(
+            (
+              i: center,
+              c: flex-end,
+            )
+          );
+          .tag_wrap {
+            @include flex(
+              (
+                i: center,
+                c: flex-end,
+              )
+            );
+            .tag-item {
+              @include flex(
+                (
+                  i: center,
+                  c: center,
+                )
+              );
+              margin-right: 14px;
+              i {
+                font-size: 18px;
+                margin-right: 4px;
+                color: #bcbcbc;
+              }
+              .num {
+                font-size: 12px;
+                font-weight: 600;
+                color: #bcbcbc;
+              }
+            }
+            .like {
+              cursor: pointer;
+            }
+            .tag-item:last-child {
+              margin-right: 0;
+            }
+          }
+          .get_btn {
+            margin-left: 30px;
+            height: 36px;
+            padding: 0 12px;
+            background-color: $themeColor;
+            border-radius: 12px;
+            box-sizing: border-box;
+            color: #fff;
+            @include flex(
+              (
+                i: center,
+                c: center,
+              )
+            );
+            i {
+              font-size: 24px;
+            }
+            .price {
+              font-size: 16px;
+              font-weight: 700;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .model-tag {
+        @include flex(
+          (
+            i: center,
+            c: flex-start,
+          )
+        );
+        .tag {
+          margin-right: 5px;
+          font-size: 13px;
+          line-height: 16px;
+          font-weight: 500;
+          color: #6e6d79;
+        }
+        .tag:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .header-img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid $themeColor;
+      box-sizing: border-box;
+      margin-right: 10px;
+    }
+    .user-desc {
+      margin-bottom: 25px;
+      @include flex(
+        (
+          i: center,
+          c: flex-start,
+        )
+      );
+      .user-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: #222;
+        margin-right: 10px;
+      }
+      .focus-btn {
+        height: 34px;
+        padding: 0 12px;
+        border: 1px solid $defaultColor;
+        border-radius: 12px;
+        color: $defaultColor;
+        @include flex(
+          (
+            i: center,
+            c: center,
+          )
+        );
+        i {
+          margin-right: 10px;
+          font-size: 20px;
+        }
+        .focus-text {
+          color: #888789;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
+    .model-desc_detail {
+      margin-bottom: 40px;
+      .detail-item {
+        margin-bottom: 18px;
+        @include flex(
+          (
+            i: flex-start,
+            c: flex-start,
+          )
+        );
+        .item-label {
+          padding: 0;
+          margin: 0 20px 0 0;
+          @include flex(
+            (
+              i: center,
+              c: flex-start,
+            )
+          );
+          i {
+            font-size: 18px;
+            color: #888789;
+          }
+          .label-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #888789;
+            margin-left: 5px;
+          }
+        }
+        .item-desc {
+          font-size: 13px;
+          font-weight: 500;
+          color: #888789;
+          padding-top: 2px;
+          .tag {
+            margin-right: 20px;
+          }
+        }
+      }
+      .detail-item:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .comment_wrap {
+      .comment_title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #222;
+        margin-top: 0;
+        margin-bottom: 23px;
+      }
+      .comment_main {
+        @include flex(
+          (
+            i: flex-start,
+            c: space-between,
+          )
+        );
+      }
+    }
+  }
+  .detail_right {
+    flex: 1;
+    max-height: 100%;
+    overflow-y: scroll;
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #222;
+      padding: 0;
+      margin: 0 0 16px 0;
+    }
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    .like_content {
+      @include flex(
+        (
+          i: flex-start,
+          c: center,
+          d: column,
+        )
+      );
+
+      .maybe-like_list {
+        height: 100%;
+        margin-bottom: 20px;
+      }
+      .btn_wrap {
+        width: 419px;
+        @include flex(
+          (
+            i: center,
+            c: center,
+          )
+        );
+      }
+    }
+  }
+}

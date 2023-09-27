@@ -1,0 +1,58 @@
+.action_modal {
+  .ant-modal-content {
+    padding: 0;
+    border-radius: 17px;
+    .action-modal_content {
+      padding: 23px 32px;
+      box-sizing: border-box;
+      @include flex(
+        (
+          i: center,
+          c: flex-start,
+          d: column,
+        )
+      );
+      .model-title {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 31px;
+      }
+      .model-desc {
+        font-size: 13px;
+        font-weight: 500;
+        color: #888789;
+        line-height: 19px;
+        margin-bottom: 56px;
+        white-space: pre-wrap;
+        text-align: center;
+      }
+      .footer-btn_wrap {
+        width: 100%;
+        @include flex(
+          (
+            i: center,
+            c: space-between,
+          )
+        );
+        .action-model_btn {
+          height: 36px;
+          width: 150px;
+          border-radius: 12px;
+          border: 1px solid $defaultColor;
+          color: #888789;
+          font-size: 16px;
+          font-weight: 600;
+          box-sizing: border-box;
+        }
+        .ok-btn {
+          margin-left: 12px;
+          background-color: $themeColor;
+          color: #fff;
+          border: none;
+        }
+      }
+    }
+  }
+}
